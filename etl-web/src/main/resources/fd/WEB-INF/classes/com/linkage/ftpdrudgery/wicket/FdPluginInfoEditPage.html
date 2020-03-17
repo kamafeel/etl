@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>更新插件信息</title>
+</head>
+<body>
+	<fieldset>
+        <legend>更新结果</legend>
+		<span wicket:id ="orderResult"></span>
+		<div>
+			<span wicket:id="feedback"/>
+    	</div>
+	</fieldset>
+		<form wicket:id="form">
+			<fieldset>
+        		<legend>插件信息</legend>
+				<table>
+					  <tr>
+					   <td><wicket:message key="Plugin_Id"></wicket:message></td>
+					   <td><input readonly type="text" wicket:id="pluginId"/></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_Id"></wicket:message></td>
+					   <td><input readonly type="text" wicket:id="taskId"/></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Date_Offset"></wicket:message></td>
+					   <td><input type="text" wicket:id="dateOffset" size="2"/></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="DB2_Statement"></wicket:message></td>
+					   <td><input type="text" wicket:id="dB2Statement" size="100" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Per_Shell"></wicket:message></td>
+					   <td><input type="text" wicket:id="perShell" size="100" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Db2_Environment"></wicket:message></td>
+					   <td><input type="text" wicket:id="db2Environment" size="100" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Plugin_Info"></wicket:message></td>
+					   <td><input type="text" wicket:id="pluginInfo" size="100" /></td>
+					  </tr>				  
+				</table>	  
+			</fieldset>
+			<fieldset>
+        		<legend>操作</legend>
+        		<input type="submit" wicket:id="delButton" value="删除" />
+				<input type="submit" wicket:id="updateButton" value="更新" />
+				<input type="submit" wicket:id="returnButton" value="返回" />
+			</fieldset>
+		</form>
+    </body>
+</html>

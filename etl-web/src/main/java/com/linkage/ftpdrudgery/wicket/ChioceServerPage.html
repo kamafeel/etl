@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>选择服务器</title>
+</head>
+<body>
+	<fieldset>
+        <legend>操作结果</legend>
+		<span wicket:id ="orderResult"></span>
+	</fieldset>
+	<form wicket:id="form">
+		<fieldset>
+        		<legend>选择服务器</legend>
+				<table>
+					  <tr>
+					   <td>Server</td>
+					   <td>
+						 <span valign="top" wicket:id="serverURL"></span>
+					   </td>
+					  </tr> 				  
+				 </table>			 
+		</fieldset>
+	<fieldset>
+        <legend>选择</legend>
+		<input type="submit" wicket:id="ChioceButton" value="选择" />
+	</fieldset>
+	</form>
+</body>
+</html>

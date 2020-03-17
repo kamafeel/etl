@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="FD_HIS_MONITOR_EXP">
+		
+	<insert id = "addFdHisMonitorExp" parameterType = "FdHisMonitorExp"  >
+	  insert into FD_HIS_MONITOR_EXP (SN_ID, MAP_KEY, MAP_VALUE)
+      values (#{snId,jdbcType=VARCHAR}, #{mapKey,jdbcType=VARCHAR}, #{mapValue,jdbcType=VARCHAR})      
+	</insert>
+	
+	<select id="getFdHisMonitorExp" parameterType="java.lang.String" resultType="FdHisMonitorExp">
+	  select SN_ID AS snId, MAP_KEY AS mapKey, MAP_VALUE AS mapValue
+      from FD_HIS_MONITOR_EXP
+      where SN_ID = #{snId,jdbcType=VARCHAR} with ur
+	</select>
+	
+</mapper>

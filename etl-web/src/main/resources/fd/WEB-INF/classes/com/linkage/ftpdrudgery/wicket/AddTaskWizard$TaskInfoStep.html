@@ -1,0 +1,82 @@
+<wicket:panel>
+	<fieldset>
+        <legend><wicket:message key="TaskInfo"></wicket:message></legend>
+		 <table>
+		  <tr>
+		   <td><wicket:message key="Task_name"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.taskName" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_sourceDir"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.sourceDir" size="50" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_destDir"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.destDir" size="50" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_regExp"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.regExp" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_isDelete"></wicket:message></td>
+		   <td>
+		   		<select wicket:id="taskBean.isDelete">
+					<option></option>
+					<option></option>
+				</select>
+			</td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_cronTrigger"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.cronTrigger" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_isBackUp"></wicket:message></td>
+		   <td>
+		   		<select wicket:id="taskBean.isBackUp">
+					<option></option>
+					<option></option>
+				</select>
+			</td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_backUpDir"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.backUpDir" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_checkSleepTime"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.checkSleepTime" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_beforeDay"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.beforeDay" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_recordValidDay"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.recordValidDay" /></td>
+		  </tr>
+		 </table>
+	 </fieldset>
+	 <fieldset>
+        <legend><wicket:message key="Task_plugin_Info"></wicket:message></legend>
+        <table>
+		  <tr>
+		   <td><wicket:message key="Task_pluginName"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.pluginName" size="50" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_pluginPath"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.pluginPath" size="50" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_pluginClassPath"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.pluginClassPath" size="50" /></td>
+		  </tr>
+		  <tr>
+		   <td><wicket:message key="Task_pluginId"></wicket:message></td>
+		   <td><input type="text" wicket:id="taskBean.pluginId" size="50" /></td>
+		  </tr>
+		</table>
+     </fieldset>
+</wicket:panel>

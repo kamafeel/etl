@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="FD_HIS_MONITOR">
+		
+	<insert id = "addFdHisMonitor" parameterType = "FdHisMonitor"  >
+      insert into FD_HIS_MONITOR (SN_ID, TASK_ID, TASK_NAME, TASK_STATUS, START_TIME, END_TIME, CAST_TIME, INSERT_TIME)
+      values (#{snId,jdbcType=VARCHAR}, #{taskId,jdbcType=VARCHAR}, #{taskName,jdbcType=VARCHAR}, #{taskStatus,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP},
+      #{castTime,jdbcType=VARCHAR}, #{insertTime,jdbcType=TIMESTAMP})      
+	</insert>
+	
+	<select id="getFdHisMonitor" parameterType="FdHisMonitorKey" resultType="FdHisMonitor">
+	  select SN_ID AS snId, TASK_ID AS taskId, TASK_NAME AS taskName, TASK_STATUS AS taskStatus, START_TIME AS startTime, END_TIME AS endTime, CAST_TIME AS castTime, INSERT_TIME AS insertTime 
+      from FD_HIS_MONITOR
+      <if test="selectKey == 'SnId'">
+        where
+      	SN_ID = #{snId,jdbcType=VARCHAR} and TASK_STATUS = #{taskStatus,jdbcType=VARCHAR} and DATE(START_TIME)=#{taskDate,jdbcType=VARCHAR}
+      	order by START_TIME desc 
+      </if>
+      <if test="selectKey == 'Id'">
+      	where
+        TASK_ID = #{taskId,jdbcType=VARCHAR} and TASK_STATUS = #{taskStatus,jdbcType=VARCHAR} and DATE(START_TIME)=#{taskDate,jdbcType=VARCHAR}
+        order by START_TIME desc 
+      </if>
+      <if test="selectKey == 'Name'">
+      	where
+        TASK_NAME like #{taskName,jdbcType=VARCHAR} and TASK_STATUS = #{taskStatus,jdbcType=VARCHAR} and DATE(START_TIME)=#{taskDate,jdbcType=VARCHAR}
+        order by START_TIME desc 
+      </if>
+      <if test="selectKey == null">
+      	where TASK_STATUS = #{taskStatus,jdbcType=VARCHAR} and DATE(START_TIME)=#{taskDate,jdbcType=VARCHAR} order by startTime desc
+      </if>
+      with ur      
+	</select>
+	
+</mapper>

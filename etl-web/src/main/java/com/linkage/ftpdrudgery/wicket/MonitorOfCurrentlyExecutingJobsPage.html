@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>任务控制</title>
+</head>
+<body>
+	<fieldset>
+        <legend>操作结果</legend>
+		<span wicket:id ="orderResult"></span>
+	</fieldset>
+	<form wicket:id="form">
+	<fieldset>
+        <legend>刷新</legend>
+		<input type="submit" wicket:id="refurbishButton" value="刷新" />
+		<span wicket:id ="refurbishTimeL"></span>
+	</fieldset>
+	<fieldset>
+        <legend>任务列表</legend>    	
+			<span wicket:id ="navigator">这里显示分页操作</span>
+			<table>
+				<tr>
+				<th>任务Id</th>
+				<th>任务名称</th>
+				<th>任务状态</th>
+				<th>开始时间</th>
+				<th>结束时间</th>
+				<th>耗时(天	时:分:秒	毫秒)</th>
+				<th>监控详情</th>
+				</tr>
+				<tr wicket:id="twMonitorBeanList">
+				<td wicket:id ="id"></td>
+				<td wicket:id ="taskName"></td>		
+				<td wicket:id ="taskStatus"></td>
+				<td wicket:id ="startTime"></td>
+				<td wicket:id ="endTime"></td>
+				<td wicket:id ="castTime"></td>
+				<td>
+				<a wicket:id="mapExp">监控详情</a>
+				</td>		
+				</tr>			
+			</table>
+	</fieldset>
+	</form>
+	<div wicket:id ="MonitorOfCurrentlyExecutingJobsPage.paneMonitorInfo"></div>
+</body>
+</html>

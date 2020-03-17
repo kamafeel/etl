@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>插件信息列表</title>
+</head>
+
+<body>
+	<fieldset>
+        <legend>查询状态</legend>
+		<span wicket:id ="FdPluginInfoListPage.orderResult"></span>
+	</fieldset>
+	<form wicket:id="form">
+		<fieldset>
+        		<legend>查询条件</legend>
+				<table>
+					  <tr>
+					   <td>插件ID</td>
+					   <td><input type="text" wicket:id="qryPdId" size="60"/></td>
+					  </tr>				  
+				 </table>			 
+		</fieldset>
+	<fieldset>
+        <legend>查询</legend>
+		<input type="submit" wicket:id="queryButton" value="查询" />
+	</fieldset>
+	</form>
+	<fieldset>
+        <legend>插件信息列表</legend>	
+		<span wicket:id ="FdPluginInfoListPage.navigator">这里显示分页操作</span>
+		<table>
+			<tr>
+			<th>插件ID</th>
+			<th>关联任务ID</th>
+			<th>时间偏移量</th>
+			<th>DB2语句</th>
+			<th>预处理语句</th>
+			<th>运行环境</th>
+			<th>插件配置信息</th>
+			<th>管理</th>
+			</tr>
+			<tr wicket:id="FdPluginInfoListPage.fdPluginInfoList">
+			<td wicket:id ="FdPluginInfoListPage.pluginId"></td>
+			<td wicket:id ="FdPluginInfoListPage.taskId"></td>
+			<td wicket:id ="FdPluginInfoListPage.dateOffset"></td>
+			<td wicket:id ="FdPluginInfoListPage.dB2Statement"></td>
+			<td wicket:id ="FdPluginInfoListPage.perShell"></td>
+			<td wicket:id ="FdPluginInfoListPage.db2Environment"></td>
+			<td wicket:id ="FdPluginInfoListPage.pluginInfo"></td>
+			<td>
+				<a wicket:id="FdPluginInfoListPage.manFdPluginInfo">管理</a>
+			</td>
+			</tr>
+		</table>
+	</fieldset>
+</body>
+</html>

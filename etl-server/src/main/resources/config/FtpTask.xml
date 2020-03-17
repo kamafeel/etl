@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="GB2312"?>
+<ns1:FtpDrudgeryList xmlns:ns1="http://www.FtpDrudgery.com/FtpTask">
+    <ns1:FtpDrudgery>
+        <ns1:Id>1</ns1:Id>
+        <ns1:TaskName>彩铃用户数据</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data</ns1:SourceDir>
+        <ns1:DestDir xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:09360)\d{8}(?:dcolorring)[.]{1}[a-z]{1}(?:.avl.gz)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CRING_BILL_DS</ns1:BackUpDir>
+        <ns1:PluginName>ods_load</ns1:PluginName>
+        <ns1:PluginPath>/interface/ods/fd2/server/plugin/ods_load/</ns1:PluginPath>
+        <ns1:PluginClassPath>com.ai.ods.data.LoadDataDisposer</ns1:PluginClassPath>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>2</ns1:Id>
+        <ns1:TaskName>地市客户基础信息</ns1:TaskName>
+        <ns1:SourceDir>/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>2</ns1:SourceFtp>
+        <ns1:RegExp>(?:DM_BASEINFO_USERD_CD_)\d{8}[.]{1}(?:cd.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_USER_BASE_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>3</ns1:Id>
+        <ns1:TaskName>订购关系数据</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:ddsmpordermsg)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_MISC_ORD_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>4</ns1:Id>
+        <ns1:TaskName>手机上网计费月数据</ns1:TaskName>
+        <ns1:SourceDir>/data_wap/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>3</ns1:SourceFtp>
+        <ns1:DestFtp xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:RegExp>(?:GPRS_)\d{6}[.]{1}(?:txt)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_BS_MNET_USER_BILL_MS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>5</ns1:Id>
+        <ns1:TaskName>短信包月话单</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:dw_imsg_smscdr_)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_BS_MCLUB_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>6</ns1:Id>
+        <ns1:TaskName>点对点短信收入数据</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:P2PSMS)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_SMS_REV_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>7</ns1:Id>
+        <ns1:TaskName>彩信套餐</ns1:TaskName>
+        <ns1:SourceDir>/data_yx/data_cxdz/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>4</ns1:SourceFtp>
+        <ns1:RegExp>(?:tc)\d{8}[.]{1}(?:txt)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_BS_MMS_SETS_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>8</ns1:Id>
+        <ns1:TaskName>用户消费</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:xf)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_USER_SALE_MS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>9</ns1:Id>
+        <ns1:TaskName>有效性数据P2PSMS</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:P2PSMS_)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_P2PSMS_EFF_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>10</ns1:Id>
+        <ns1:TaskName>有效性数据Cdrcall</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:cdrcall_)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CDRCALL_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>11</ns1:Id>
+        <ns1:TaskName>经分WAP流量</ns1:TaskName>
+        <ns1:SourceDir>/boss_jihe/new/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>5</ns1:SourceFtp>
+        <ns1:RegExp>(?:return_)\d{8}[.]{1}(?:txt)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_NO_FLOW</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>12</ns1:Id>
+        <ns1:TaskName>ODS店员积分（积分成功表）</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:DestFtp xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:RegExp>\d{6}(?:dchnsucscorelog)[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ods_ng_clksrc_SUCCD_ms</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>13</ns1:Id>
+        <ns1:TaskName>ODS店员积分（积分失败表）</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>\d{8}(?:dchnfailscorelog)[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CLKSRC_FAILED_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>14</ns1:Id>
+        <ns1:TaskName>ODS店员积分（店员积分人员信息表）</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>\d{8}(?:dchnpersonmsg)[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CLKSRC_USER_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>15</ns1:Id>
+        <ns1:TaskName>ODS店员积分（店员积分申请预登记表）</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>\d{8}(?:dchnprescorelog)[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CLKSRC_PRE_APPLY_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>16</ns1:Id>
+        <ns1:TaskName>ODS店员积分（店员积分帐户表）</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>\d{8}(?:dchnuseraccmsg)[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CLKSRC_ACT_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>17</ns1:Id>
+        <ns1:TaskName>ODS店员积分（积分业务包配置表）</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>\d{8}(?:schnscorebusipkg)[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CLKSRC_BUSS_CONF_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>18</ns1:Id>
+        <ns1:TaskName>ODS店员积分（积分调整流水表）</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>\d{8}(?:wchnscoreadjslog)[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_CLKSRC_ADJT_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>19</ns1:Id>
+        <ns1:TaskName>手机报便民短信计费</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:data_sjb_bm)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_PAPER_BILL_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>20</ns1:Id>
+        <ns1:TaskName>新入网用户</ns1:TaskName>
+        <ns1:SourceDir>/d1_data4/sccrm/out_data/data/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>1</ns1:SourceFtp>
+        <ns1:RegExp>(?:xrw)\d{8}[.]{1}(?:txt.Z)</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_INNET_NEW_USER_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+    <ns1:FtpDrudgery>
+        <ns1:Id>21</ns1:Id>
+        <ns1:TaskName>地市客户基础信息</ns1:TaskName>
+        <ns1:SourceDir>/</ns1:SourceDir>
+        <ns1:DestDir>/interface/test/</ns1:DestDir>
+        <ns1:SourceFtp>6</ns1:SourceFtp>
+        <ns1:RegExp>(?:DM_BASEINFO_USERD_)\d{8}[.]{1}(?:(?:dm01.Z)|(?:dm02.Z)|(?:cd.Z))</ns1:RegExp>
+        <ns1:IsDelete>false</ns1:IsDelete>
+        <ns1:CheckSleepTime>0</ns1:CheckSleepTime>
+        <ns1:CronTrigger>0 0 2 * * ?</ns1:CronTrigger>
+        <ns1:BeforeDay>0</ns1:BeforeDay>
+        <ns1:IsBackUp>false</ns1:IsBackUp>
+        <ns1:BackUpDir>ODS_NG_USER_BASE_DS</ns1:BackUpDir>
+        <ns1:PluginName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <ns1:PluginClassPath xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </ns1:FtpDrudgery>
+</ns1:FtpDrudgeryList>

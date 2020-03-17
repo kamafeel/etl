@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title><wicket:message key="Title"></wicket:message></title>
+</head>
+<body>
+	<fieldset>
+        <legend><wicket:message key="Operation_Result"></wicket:message></legend>
+		<span wicket:id ="orderResult"></span>
+	</fieldset>
+	<form wicket:id="form">
+	<fieldset>
+        <legend><wicket:message key="Ftp_List"></wicket:message></legend>    	
+			<span wicket:id ="navigator">这里显示分页操作</span>
+			<table>
+				<tr>
+				<th><wicket:message key="Choise"></wicket:message></th>
+				<th><wicket:message key="ID"></wicket:message></th>
+				<th><wicket:message key="IP"></wicket:message></th>
+				<th><wicket:message key="Port"></wicket:message></th>
+				<th><wicket:message key="User_Name"></wicket:message></th>
+				<th><wicket:message key="Password"></wicket:message></th>
+				<th><wicket:message key="Transfer_Mode"></wicket:message></th>			
+				<th><wicket:message key="Work_Mode"></wicket:message></th>
+				<th><wicket:message key="Rela_Task"></wicket:message></th>
+				</tr>
+				<tr wicket:id="newFtpList">
+				<td><input type="checkbox" wicket:id="isSelect" /></td>
+				<td wicket:id ="id"></td>
+				<td wicket:id ="remoteIP"></td>		
+				<td wicket:id ="port"></td>
+				<td wicket:id ="userName"></td>
+				<td wicket:id ="passWord"></td>
+				<td wicket:id ="transfersType"></td>
+				<td wicket:id ="workType"></td>
+				<td wicket:id ="relationship"></td>					
+				</tr>			
+			</table>
+		</fieldset>
+		<fieldset>
+        	<legend><wicket:message key="Order"></wicket:message></legend>
+				<input type="submit" wicket:id="deleteButton" value="删除" />
+		</fieldset>
+	</form>
+</body>
+</html>

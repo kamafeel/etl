@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="ODS_PUB_LOG">
+		
+	<insert id = "addOdsPubLog" parameterType = "OdsPubLog"  >
+		insert into ODS_PUB_LOG (ETL_DATA_CYCLE, SCHEMA_NAME, TABLE_NAME, START_TIME, END_TIME,	ODS_FLAG, DWD_FLAG, DATA_CNT)
+		values (#{etlDataCycle,jdbcType=VARCHAR}, #{schemaName,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP},
+      	#{endTime,jdbcType=TIMESTAMP}, #{odsFlag,jdbcType=SMALLINT}, #{dwdFlag,jdbcType=SMALLINT}, #{dataCnt,jdbcType=INTEGER}) with ur
+	</insert>
+	
+	<update id="updateOdsPubLog" parameterType="OdsPubLog">
+	  update ODS_PUB_LOG set
+      <if test="endTime != null">
+      	END_TIME = #{endTime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="odsFlag != null">
+      	,ODS_FLAG = #{odsFlag,jdbcType=SMALLINT}
+      </if>
+      	where
+        ETL_DATA_CYCLE = #{etlDataCycle,jdbcType=VARCHAR}
+        and 
+        TABLE_NAME = #{tableName,jdbcType=VARCHAR} with ur
+	</update>
+	
+	<delete id="delOdsPubLog" parameterType="OdsPubLog">
+	  	delete from ODS_PUB_LOG 
+      	where
+        ETL_DATA_CYCLE = #{etlDataCycle,jdbcType=VARCHAR}
+        and 
+        SCHEMA_NAME = #{schemaName,jdbcType=VARCHAR}
+        and 
+        TABLE_NAME = #{tableName,jdbcType=VARCHAR} with ur
+	</delete>
+	
+</mapper>

@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>常见问题</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<h1>FAQ</h1>
+<div>
+    <h2>内容大纲</h2>
+    <div>
+      <ul>
+        <li><a href="faq.html#FAQ-General">通常</a>
+            <ul>
+              <li><a href="faq.html#FAQ-WhatdoesFD2">它是做什么的?</a> </li>
+              <li><a href="faq.html#FAQ-WhatdoesFD2support">支持什么模式?</a> </li>
+              <li><a href="faq.html#FAQ-WhatdoesFD2special">有什么特点?</a> </li>
+              <li><a href="faq.html#FAQ-WhatisrequiredtobuildrunFD2">运行要求?</a> </li>
+              <li><a href="faq.html#FAQ-HowcanIgetnewVersion">如何获得最新版本?</a> </li>
+			  <li><a href="faq.html#FAQ-HowcanIMonitor">如何监控程序?</a> </li>
+              <li><a href="faq.html#FAQ-WhatdoesInotice">需要注意什么?</a> </li>
+            </ul>
+        </li>
+        <li><a href="faq.html#FAQ-ManageFD2">如何管理它?</a>
+            <ul>
+              <li><a href="faq.html#FAQ-AddTask">如何新增一个任务?</a> </li>
+              <li><a href="faq.html#FAQ-UpdateTask">如何更新任务?</a> </li>
+              <li><a href="faq.html#FAQ-ControlTask">怎么控制任务?</a> </li>
+            </ul>
+        </li>
+        <li><a href="faq.html#FAQ-KeyExplain">字段说明</a>
+            <ul>
+              <li><a href="faq.html#FAQ-Key_Ftp">FTP字段</a> </li>
+				<ul>
+				  <li><a href="faq.html#FAQ-Key_transfersType">传输模式</a> </li>
+                  <li><a href="faq.html#FAQ-Key_workType">工作模式</a> </li>
+				  <li><a href="faq.html#FAQ-Key_encoding">通讯的编码集</a> </li>
+                  <li><a href="faq.html#FAQ-Key_retryCount">重试次数</a> </li>
+                  <li><a href="faq.html#FAQ-Key_retryInterval">重试间隔时间(毫秒)</a> </li>
+                </ul>
+				<li><a href="faq.html#FAQ-Key_Task">任务字段</a> </li>
+				<ul>
+				  <li><a href="faq.html#FAQ-Key_sourceDir">数据来源路径</a> </li>
+				  <li><a href="faq.html#FAQ-Key_destDir">数据目的路径</a> </li>
+			      <li><a href="faq.html#FAQ-Key_regExp">数据来源正则匹配</a> </li>
+				  <li><a href="faq.html#FAQ-Key_isDelete">下载完后是否要删除</a> </li>
+				  <li><a href="faq.html#FAQ-Key_cronTrigger">任务调度信息</a> </li>
+				  <li><a href="faq.html#FAQ-Key_isBackUp">是否备份原始文件</a> </li>
+				  <li><a href="faq.html#FAQ-Key_backUpDir">备份目录(相对路径)</a> </li>
+				  <li><a href="faq.html#FAQ-Key_checkSleepTime">检查间隙时间(毫秒)</a> </li>
+				  <li><a href="faq.html#FAQ-Key_beforeDay">前?天时间限制</a> </li>
+				  <li><a href="faq.html#FAQ-Key_pluginPath">插件路径</a> </li>
+				  <li><a href="faq.html#FAQ-Key_pluginClassPath">插件Class路径</a> </li>
+				</ul>
+            </ul>
+        </li>
+        <li><a href="faq.html#FAQ-plugin">插件</a>
+            <ul>
+              <li><a href="faq.html#FAQ-WhatdoesPlugin">插件是什么?</a> </li>
+              <li><a href="faq.html#FAQ-HowtodoItByMySelf">如何写一个插件?</a> </li>
+              <li><a href="faq.html#FAQ-WhatdoesInoticeInPlugin">需要注意些什么?</a> </li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+	<h2><a name="FAQ-General" id="FAQ-General"></a>通常</h2>
+    <h3><a name="FAQ-WhatdoesFD2" id="FAQ-WhatdoesFD2"></a>它是做什么的?</h3>
+	<p>FD2其实就是一个文件传输平台.......</p>
+	<h3><a name="FAQ-WhatdoesFD2support" id="FAQ-WhatdoesFD2support"></a>支持什么模式?</h3>
+    <ul>
+      <li>远端FTP-->下载-->上传--->远端FTP</li>
+	  <li>本机-->扫描-->上传--->远端FTP</li>
+	  <li>远端FTP-->下载-->转移--->本机</li>
+	  <li>本机-->扫描-->转移--->本机</li>
+    </ul>
+    <h3><a name="FAQ-WhatdoesFD2special" id="FAQ-WhatdoesFD2special"></a>有什么特点?</h3>
+    <ul>
+      <li>断点续载，断点续传(需要目标Ftp服务器的支持)</li>
+	  <li>配置方便</li>
+	  <li>精确的任务调度时间控制</li>
+    </ul>
+	<h3><a name="FAQ-WhatisrequiredtobuildrunFD2" id="FAQ-WhatisrequiredtobuildrunFD2"></a>运行要求?</h3>
+	<p>运行环境需要jre1.5+</p>
+	<h3><a name="FAQ-HowcanIgetnewVersion" id="FAQ-HowcanIgetnewVersion"></a>如何获得最新版本?</h3>
+	<p>联系:<span class="STYLE1">zhangqi8@asiainfo-linkage.com</span></p>
+	<h3><a name="FAQ-HowcanIMonitor" id="FAQ-HowcanIMonitor"></a>如何监控程序?</h3>
+	<p>本机运行:jconsole [运行主机IP]:8888</p>
+	<h3><a name="FAQ-WhatdoesInotice" id="FAQ-WhatdoesInotice"></a>需要注意什么?</h3>
+	<p>部署路径不能含有中文</p>
+	<h2><a name="FAQ-ManageFD2" id="FAQ-ManageFD2"></a>如何管理它?</h2>
+	<h3><a name="FAQ-AddTask" id="FAQ-AddTask"></a>如何新增一个任务?</h3>
+	<p>1.文件的获取方式</p>
+	<p><a href="/fd/?wicket:bookmarkablePage=:com.linkage.ftpdrudgery.wicket.WizardPage"><img src="Images/faq/new_1.JPG" width="765" height="251" /></a></p>
+	<p>2.如果上一步你选择了'需要下载数据的选项',就会出现下面的选择文件提供方Ftp配置的界面。你可以选择已有的Ftp配置信息或者新增加一个Ftp配置信息</p>
+	<p><img src="Images/faq/new_2.JPG" width="608" height="364" /></a></p>
+	<p>3.如果你选择需要新增一个Ftp配置,就会出现以下的界面</p>
+	<p><img src="Images/faq/new_3.JPG" width="618" height="363" /></p>
+	<p>4.文件获取方式配置完后，就是文件目的方式的配置了。如果文件需要上传的对方，勾上。</p>
+	<p><img src="Images/faq/new_4.JPG" width="613" height="239" /></p>
+	<p>5.选择上传Ftp的配置方式,同下载</p>
+	<p><img src="Images/faq/new_5.JPG" width="615" height="368" /></p>
+	<p>6.配置任务的具体信息</p>
+	<p><img src="Images/faq/new_6.JPG" width="616" height="437" /></p>
+	<p>7.是否要把这次任务的信息保存在配置文件中</p>
+	<p><img src="Images/faq/new_7.JPG" width="610" height="235" /></p>
+	<p>8.最终确认下任务的信息</p>
+	<p><img src="Images/faq/new_8.JPG" width="609" height="408" /></p>
+	<p>9.是否添加成功</p>
+	<p><img src="Images/faq/new_9.JPG" width="465" height="78" /></p>
+	<p>&nbsp;</p>
+	<h3><a name="FAQ-UpdateTask" id="FAQ-UpdateTask"></a>如何更新任务?</h3>
+	<p><a href="/fd/?wicket:bookmarkablePage=:com.linkage.ftpdrudgery.wicket.JobListPage">更新任务</a></p>
+	<h3><a name="FAQ-ControlTask" id="FAQ-ControlTask"></a>怎么控制任务?</h3>
+	<p><a href="/fd/?wicket:bookmarkablePage=:com.linkage.ftpdrudgery.wicket.TaskControlPage">控制任务</a></p>
+	<h2><a name="FAQ-KeyExplain" id="FAQ-KeyExplain"></a>字段说明</h2>
+	<h3><a name="FAQ-Key_Ftp" id="FAQ-Key_Ftp"></a>FTP字段</h3>
+	<h4><a name="FAQ-Key_transfersType" id="FAQ-Key_transfersType"></a>传输模式</h4>
+	<p>ASCII模式和Binary模式的区别是回车换行的处理，Binary模式不对数据进行任何处理，ASCII模式将回车换行转换为本机的回车字符，比如：UNIX下是\n,Windows下是\r\n，Mac下是\r</p>
+	<p>建议使用Binary方式</p>
+	<h4><a name="FAQ-Key_workType" id="FAQ-Key_workType"></a>工作模式</h4>
+	<p>FTP的连接一般是有两个连接的，一个是客户程和服务器传输命令的，另一个是数据传送的连接。FTP服务程序一般会支持两种不同的模式，一种是Port模式，一种是Passive模式(Pasv Mode),这两种不同模式连接方式的分别呢?</p>
+	<p>假设客户端为C,服务端为S.</p>
+	<p>Port模式:</p>
+	<p>当客户端C向服务端S连接后，使用的是Port模式,那么客户端C会发送一条命令告诉服务端S(客户端C在本地打开了一个端口N在等着你进行数据连接),当服务端S收到这个Port命令后 就会向客户端打开的那个端口N进行连接，这种数据连接就生成了。</p>
+	<p>Pasv模式:</p>
+	<p>当客户端C向服务端S连接后，服务端S会发信息给客户端C,这个信息是(服务端S在本地打开了一个端口M,你现在去连接我吧),当客户端C收到这个信息后，就可以向服务端S的M端口进行连接,连接成功后，数据连接也建立了。</p>
+	<p>一般Pasv模式应用多于Port模式,如果发现正确的口令无法登陆FTP的时候可以切换下工作模式</p>
+	<h4><a name="FAQ-Key_encoding" id="FAQ-Key_encoding"></a>通讯的编码集</h4>
+	<p>FTP一般采用utf8和GBK,发现乱码尝试修改此元素</p>
+	<h4><a name="FAQ-Key_retryCount" id="FAQ-Key_retryCount"></a>重试次数</h4>
+	<p>登陆FTP服务器失败时,重试的次数</p>
+	<h4><a name="FAQ-Key_retryInterval" id="FAQ-Key_retryInterval"></a>重试间隔时间(毫秒)</h4>
+	<p>重试间隔时间</p>
+	<h3><a name="FAQ-Key_Ftp" id="FAQ-Key_Ftp"></a>任务字段</h3>
+	<h4><a name="FAQ-Key_sourceDir" id="FAQ-Key_sourceDir"></a>数据来源路径</h4>
+	<p>如果任务没有设置下载FTP,那么这个字段的含义为本机的路径(全路径)</p>
+	<p>如果任务设置下载FTP,那么这个字段的含义为下载路径</p>
+	<h4><a name="FAQ-Key_destDir" id="FAQ-Key_destDir"></a>数据目的路径</h4>
+	<p>如果任务没有设置上传FTP,那么这个字段的含义为本机的路径(全路径)</p>
+	<p>如果任务设置上传FTP,那么这个字段的含义为上传路径</p>
+	<h4><a name="FAQ-Key_regExp" id="FAQ-Key_regExp"></a>数据来源正则匹配</h4>
+	<p>Java正则表达式</p>
+	<h4><a name="FAQ-Key_isDelete" id="FAQ-Key_isDelete"></a>下载完后是否要删除</h4>
+	<p>如果设置为true,程序执行下载时,不会去下载当日和昨日的记录文件中已经存在的文件.</p>
+	<p>如果设置为false,程序执行下载时,不会去下载所有记录文件中的已经存在的文件.</p>
+	<h4><a name="FAQ-Key_cronTrigger" id="FAQ-Key_cronTrigger"></a>任务调度信息</h4>
+	<p>例1 一个简单的每隔5分钟触发一次的表达式</p>
+	<p>"0 0/5 * * * ?"</p>
+	<p>例2 – 在每分钟的10秒后每隔5分钟触发一次的表达式(时间点: 10:00:10, 10:05:10,.....)</p>
+	<p>"10 0/5 * * * ?"</p>
+	<p>例3 – 每天凌晨2点整执行任务</p>
+	<p>"0 0 2 * * ?"</p>
+	<p>例4 – 每天凌晨2点和4点之间每隔半个小时触发一次且不包括4点(时间点: 2:30:00, 3:00:00, 3:30:00)</p>
+	<p>"0 0/30 2-3 * * ?"</p>
+	<p>例5 – 在每个周5的22:30点执行任务</p>
+	<p>"0 30 22 ? * FRI"</p>
+	<p>"0 30 22 ? * 6"</p>
+	<p>例6 – 在每个周三和周五的10：30，11：30，12：30触发的表达式</p>
+	<p>"0 30 10-13 ? * WED,FRI"</p>
+	<p>"0 30 10-13 ? * 4,6"</p>
+	<p>例7 – 每月最后一天23:30执行任务</p>
+	<p>"0 30 23 L * ?"</p>
+	<p>例8 – 每月1号23:30执行任务</p>
+	<p>"0 30 23 1 * ?"</p>
+	<p>例9 – 在每个月的5号，20号的8点和10点之间每隔半个小时触发一次且不包括10点，只是8：30，9：00和9：30的表达式。</p>
+	<p>"0 0/30 8-9 5,20 * ?"</p>
+	<p>表达式举例：<br />
+      <br />
+      &quot;0 0 12 * * ?&quot;         每天中午12点触发<br />
+      &quot;0 15 10 ? * *&quot;        每天上午10:15触发<br />
+      &quot;0 15 10 * * ?&quot;        每天上午10:15触发<br />
+      &quot;0 15 10 * * ? *&quot;      每天上午10:15触发<br />
+      &quot;0 15 10 * * ? 2005&quot;   2005年的每天上午10:15触发<br />
+      &quot;0 * 14 * * ?&quot;         在每天下午2点到下午2:59期间的每1分钟触发<br />
+      &quot;0 0/5 14 * * ?&quot;       在每天下午2点到下午2:55期间的每5分钟触发<br />
+      &quot;0 0/5 14,18 * * ?&quot;    在每天下午2点到2:55期间和下午6点到6:55期间的每5分钟触发<br />
+      &quot;0 0-5 14 * * ?&quot;       在每天下午2点到下午2:05期间的每1分钟触发<br />
+      &quot;0 10,44 14 ? 3 WED&quot;   每年三月的星期三的下午2:10和2:44触发<br />
+      &quot;0 15 10 ? * MON-FRI&quot;  周一至周五的上午10:15触发<br />
+      &quot;0 15 10 15 * ?&quot;       每月15日上午10:15触发<br />
+      &quot;0 15 10 L * ?&quot;        每月最后一日的上午10:15触发<br />
+      &quot;0 15 10 ? * 6L&quot;       每月的最后一个星期五上午10:15触发<br />
+      &quot;0 15 10 ? * 6L 2002-2005&quot;     2002年至2005年的每月的最后一个星期五上午10:15触发<br />
+      &quot;0 15 10 ? * 6#3&quot;      每月的第三个星期五上午10:15触发<br />
+      0 6 * * *              每天早上6点<br />
+      0 */2 * * *            每两个小时<br />
+      0 23-7/2，8 * * *      晚上11点到早上8点之间每两个小时，早上八点<br />
+      0 11 4 * 1-3           每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点<br />
+    0 4 1 1 *              1月1日早上4点</p>
+	<table border="1" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="64" valign="top"><p align="center">域位置 </p></td>
+        <td width="113" valign="top"><p align="center">含义 </p></td>
+        <td width="85" valign="top"><p align="center">是否为空 </p></td>
+        <td width="255" valign="top"><p align="center">取值 </p></td>
+        <td width="51" valign="top"><p align="center">备注 </p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p align="center">1</p></td>
+        <td width="113" valign="top"><p>Seconds 秒</p></td>
+        <td width="85" valign="top"><p>no</p></td>
+        <td width="255" valign="top"><p>0-59</p></td>
+        <td width="51" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p align="center">2</p></td>
+        <td width="113" valign="top"><p>Minutes 分钟</p></td>
+        <td width="85" valign="top"><p>no</p></td>
+        <td width="255" valign="top"><p>0-59</p></td>
+        <td width="51" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p align="center">3</p></td>
+        <td width="113" valign="top"><p>Hours 小时</p></td>
+        <td width="85" valign="top"><p>no</p></td>
+        <td width="255" valign="top"><p>0-23</p></td>
+        <td width="51" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p align="center">4</p></td>
+        <td width="113" valign="top"><p>Day-of-Month    月中的天</p></td>
+        <td width="85" valign="top"><p>no</p></td>
+        <td width="255" valign="top"><p>0-31(需要注意不同的月份中的天数不同)</p></td>
+        <td width="51" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p align="center">5</p></td>
+        <td width="113" valign="top"><p>Month 月</p></td>
+        <td width="85" valign="top"><p>no</p></td>
+        <td width="255" valign="top"><p>0-11或者JAN,FEB MAR, APR, MAY, JUN, JUL,    AUG, SEP, OCT, NOV,DEC</p></td>
+        <td width="51" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p align="center">6</p></td>
+        <td width="113" valign="top"><p>Day-of-Week    周中的天</p></td>
+        <td width="85" valign="top"><p>no</p></td>
+        <td width="255" valign="top"><p>1到7来表示（1=星期日）或者用字符串SUN,    MON, TUE, WED, THU, FRI 和SAT</p></td>
+        <td width="51" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p align="center">7</p></td>
+        <td width="113" valign="top"><p>Year    (optional field) 年(可选的域)</p></td>
+        <td width="85" valign="top"><p>yes</p></td>
+        <td width="255" valign="top"><p>&nbsp;</p></td>
+        <td width="51" valign="top"><p>&nbsp;</p></td>
+      </tr>
+    </table>
+	<p><strong>特殊符号 </strong></p>
+	<table border="1" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="64" valign="top"><br />
+          符号 </td>
+        <td width="113" valign="top"><p>作用范围 </p></td>
+        <td width="391" valign="top"><p>符号含义 </p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p>*</p></td>
+        <td width="113" valign="top"><p>7个域中</p></td>
+        <td width="391" valign="top"><p>代表‘每个’，比如用在月的域中代表每月，等等</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p>/</p></td>
+        <td width="113" valign="top"><p>通常在1，2，3域</p></td>
+        <td width="391" valign="top"><p>如果分钟域中放入'0/15'，它表示“每隔15分钟，从0开始”，如果在分中域中使用'3/20'，则表示“小时中每隔20分钟，从第3分钟开始”或者另外相同的形式就是'3,23,43'</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p>?</p></td>
+        <td width="113" valign="top"><p>4，6域</p></td>
+        <td width="391" valign="top"><p>它用来表示“没有指定值”</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p>L</p></td>
+        <td width="113" valign="top"><p>4，6域</p></td>
+        <td width="391" valign="top"><p>这个字符是&quot;last&quot;的简写，但是在两个域中的意义不同。例如，在day-of-month域中的&quot;L&quot;表示这个月的最后一天，即，一月的31日，非闰年的二月的28日。如果它用在day-of-week中，则表示&quot;7&quot;或者&quot;SAT&quot;。但是如果在day-of-week域中，这个字符跟在别的值后面，则表示&quot;当月的最后的周XXX&quot;。例如：&quot;6L&quot; 或者 &quot;FRIL&quot;都表示本月的最后一个周五。当使用'L'选项时，最重要的是不要指定列表或者值范围，否则会导致混乱</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p>W</p></td>
+        <td width="113" valign="top"><p>4，6域</p></td>
+        <td width="391" valign="top"><p>用来指定距离给定日最接近的周几（在day-of-week域中指定）。例如：如果你为day-of-month域指定为&quot;15W&quot;,则表示“距离月中15号最近的周几”</p></td>
+      </tr>
+      <tr>
+        <td width="64" valign="top"><p>#</p></td>
+        <td width="113" valign="top"><p>4域</p></td>
+        <td width="391" valign="top"><p>表示表示月中的第几个周几。例如：day-of-week域中的&quot;6#3&quot; 或者 &quot;FRI#3&quot;表示“月中第三个周五”</p></td>
+      </tr>
+    </table>
+	<h4><a name="FAQ-Key_isBackUp" id="FAQ-Key_isBackUp"></a>是否备份原始文件</h4>
+	<p>如果设置为true,程序备份原始文件(包括插件生成的文件,或者是对方生产的文件),反之亦然</p>
+	<h4><a name="FAQ-Key_backUpDir" id="FAQ-Key_backUpDir"></a>备份目录(相对路径)</h4>
+	<p>最终的全路径=存档文件夹 + 备份目录(相对路径)</p>
+	<p><span class="STYLE1">(注意保持每个任务的BackDir是唯一的，避免各个任务的备份/记录文件相互不干扰)</span></p>
+	<h4><a name="FAQ-Key_checkSleepTime" id="FAQ-Key_checkSleepTime"></a>检查间隙时间(毫秒)</h4>
+	<p>避免下载的时候取到对方正在生成文件,工作原理大致是:</p>
+	<p>如果此值不为'0',下载文件的时候会首先Check需要下载文件的大小-->休眠此值的时间-->休眠结束-->再次Check此文件的大小-->如果没有发生变化-->认为此文件已经可以下载,认为此文件对方已经完成写操作,是个OK的文件</p>
+	<p>by the way:考虑到此元素会直接影响程序执行效率和对方写文件的缓存大小不确定性,建议非特殊要求，一律设置为'0'</p>
+	<h4><a name="FAQ-Key_beforeDay" id="FAQ-Key_beforeDay"></a>前?天时间限制</h4>
+	<p>为某些特殊要求而实现的功能:</p>
+	<p>某些银行对账文件,文件一年都不删除,而名字又是按时间来定义,这样如果程序运行一年后就会不再下载文件</p>
+	<p>by the way:非特殊要求,默认设置为‘0’</p>
+	<h4><a name="FAQ-Key_pluginPath" id="FAQ-Key_pluginPath"></a>插件路径</h4>
+	<p>全路径</p>
+	<h4><a name="FAQ-Key_pluginClassPath" id="FAQ-Key_pluginClassPath"></a>插件Class路径</h4>
+	<p>按照插件规范,包含必需的方法的类</p>
+	<h2><a name="FAQ-plugin" id="FAQ-plugin"></a>插件</h2>
+	<h3><a name="FAQ-WhatdoesPlugin" id="FAQ-WhatdoesPlugin"></a>插件是什么?</h3>
+	<p>FD是一个文件传输平台,插件就相当于在整个传输环节中加上了文件处理的环节,文件处理由插件实现,文件的传输交给FD平台来操作</p>
+	<h3><a name="FAQ-HowtodoItByMySelf" id="FAQ-HowtodoItByMySelf"></a>如何写一个插件?</h3>
+	<p>首先FD2的插件工作原理大致是这样:</p>
+	<p>1.原始文件由对方生成-->插件处理-->回执文件(可有可无)</p>
+	<p>2.原始文件由插件生成-->上传(转移)到对方</p>
+	<p>第1种情况,FD2平台会把原始文件以File[]数组的方式交给插件,插件需要具有的方法:public File[] disposeFile(File[] file){....}插件处理完毕后,如果需要回执文件,就把回执文件以File[]数组的形式返回,FD2会按照任务的配置,进行相应的处理,如果没有回执文件就返回null</p>
+	<p>第2种情况,原始文件由插件直接生成,插件需要具有的方法定义是:public File[] produceFile(),插件生成的文件,FD2会按照任务的配置,进行相应的处理</p>
+	<h3><a name="FAQ-WhatdoesInoticeInPlugin" id="FAQ-WhatdoesInoticeInPlugin"></a>需要注意些什么?</h3>
+	<p>1.FD框架已引用一下jar,如果插件需要下面的jar可不必再次引用</p>
+	<p>commons-collections-3.2.jar</p>
+	<p>commons-net-ftp-2.0.jar</p>
+	<p>xbean.jar</p>
+	<p>quartz-1.6.5.jar</p>
+	<p>commons-logging-1.1.jar</p>
+	<p>jsr173_1.0_api.jar</p>
+	<p>logback-classic-0.9.15.jar</p>
+	<p>logback-core-0.9.15.jar</p>
+	<p>slf4j-api-1.5.6.jar</p>
+</body>
+</html>

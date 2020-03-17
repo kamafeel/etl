@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>查询任务</title>
+</head>
+
+<body>
+	<fieldset>
+        <legend>操作结果</legend>
+		<span wicket:id ="QryTaskPage.orderResult"></span>
+	</fieldset>
+	<form wicket:id="form">
+		<fieldset>
+        		<legend>查询条件</legend>
+				<table>
+					  <tr>
+					   <td>关键字</td>
+					   <td><input type="text" wicket:id="qry" size="60"/></td>
+					  </tr>
+					  <tr>
+					   <td>类别</td>
+					   <td>
+						 <span valign="top" wicket:id="qryKey"></span>
+						</td>
+					  </tr> 				  
+				 </table>			 
+		</fieldset>
+	<fieldset>
+        <legend>查询</legend>
+		<input type="submit" wicket:id="queryButton" value="查询" />
+	</fieldset>
+	</form>
+	<fieldset>
+        <legend>任务列表</legend>	
+		<span wicket:id ="QryTaskPage.navigator">这里显示分页操作</span>
+		<table>
+			<tr>
+			<th>ID</th>
+			<th>名称</th>
+			<th>数据来源路径</th>
+			<th>数据目的路径</th>
+			<th>来源Ftp</th>
+			<th>目的Ftp</th>
+			<th>正则匹配</th>
+			<th>是否删除</th>		
+			<th>任务调度</th>
+			<th>是否备份</th>
+			<th>备份目录</th>
+			<th>休眠时间</th>
+			<th>插件信息</th>
+			</tr>
+			<tr wicket:id="QryTaskPage.taskList">
+			<td wicket:id ="QryTaskPage.taskId">taskId</td>
+			<td wicket:id ="QryTaskPage.taskName">taskName</td>
+			<td wicket:id ="QryTaskPage.sourceDir">sourceDir</td>
+			<td wicket:id ="QryTaskPage.destDir">destDir</td>			
+			<td>
+				<a wicket:id ="QryTaskPage.sourceFtp">查询详情</a>
+			</td>
+			<td>
+				<a wicket:id ="QryTaskPage.destFtp">查询详情</a>
+			</td>
+			<td wicket:id ="QryTaskPage.regExp">regExp</td>
+			<td wicket:id ="QryTaskPage.isDelete">isDelete</td>			
+			<td wicket:id ="QryTaskPage.cronTrigger">cronTrigger</td>
+			<td wicket:id ="QryTaskPage.isbackUp">isbackUp</td>
+			<td wicket:id ="QryTaskPage.backUpDir">backDir</td>
+			<td wicket:id ="QryTaskPage.checkSleepTime">checkSleepTime</td>
+			<td>
+				<a wicket:id="QryTaskPage.pluginInfo">插件信息</a>
+			</td>
+			</tr>
+		</table>
+	</fieldset>
+	<div wicket:id ="QryTaskPage.paneFtpInfo"></div>
+	<div wicket:id ="QryTaskPage.panePluginInfo"></div>
+</body>
+</html>

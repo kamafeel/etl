@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>任务列表</title>
+</head>
+
+<body>
+	<fieldset>
+        <legend>查询状态</legend>
+		<span wicket:id ="JobListPage.orderResult"></span>
+	</fieldset>
+	<fieldset>
+        <legend>任务列表</legend>	
+		<span wicket:id ="JobListPage.navigator">这里显示分页操作</span>
+		<table>
+			<tr>
+			<th>ID</th>
+			<th>名称</th>
+			<th>数据来源路径</th>
+			<th>数据目的路径</th>
+			<th>来源Ftp</th>
+			<th>目的Ftp</th>
+			<th>正则匹配</th>
+			<th>是否删除</th>		
+			<th>任务调度</th>
+			<th>是否备份</th>
+			<th>备份目录</th>
+			<th>休眠时间</th>
+			<th>插件信息</th>
+			<th>更新</th>
+			</tr>
+			<tr wicket:id="JobListPage.taskList">
+			<td wicket:id ="JobListPage.taskId">taskId</td>
+			<td wicket:id ="JobListPage.taskName">taskName</td>
+			<td wicket:id ="JobListPage.sourceDir">sourceDir</td>
+			<td wicket:id ="JobListPage.destDir">destDir</td>			
+			<td>
+				<a wicket:id ="JobListPage.sourceFtp">查询详情</a>
+			</td>
+			<td>
+				<a wicket:id ="JobListPage.destFtp">查询详情</a>
+			</td>
+			<td wicket:id ="JobListPage.regExp">regExp</td>
+			<td wicket:id ="JobListPage.isDelete">isDelete</td>			
+			<td wicket:id ="JobListPage.cronTrigger">cronTrigger</td>
+			<td wicket:id ="JobListPage.isbackUp">isbackUp</td>
+			<td wicket:id ="JobListPage.backUpDir">backDir</td>
+			<td wicket:id ="JobListPage.checkSleepTime">checkSleepTime</td>
+			<td>
+				<a wicket:id="JobListPage.pluginInfo">插件信息</a>
+			</td>
+			<td>
+				<a wicket:id="JobListPage.updateJob">更新</a>
+			</td>
+			</tr>
+		</table>
+	</fieldset>
+	<div wicket:id ="JobListPage.paneFtpInfo"></div>
+	<div wicket:id ="JobListPage.panePluginInfo"></div>
+</body>
+</html>

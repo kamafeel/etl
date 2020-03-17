@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GB2312"?>
+<ns1:FtpSystem xmlns:ns1="http://www.FtpDrudgery.com/FtpSystem">
+    <!--下载文件存放临时文件夹-->
+    <ns1:DownLoadTempDir>/interface/ods/temp</ns1:DownLoadTempDir>
+    <!--存档文件夹-->
+    <ns1:BackUpDir>/interface/ods/back</ns1:BackUpDir>
+    <!--上传临时后缀-->
+    <ns1:UploadPostfix>.temp</ns1:UploadPostfix>
+    <!--控制台配置信息-->
+    <ns1:FtpConsole>
+        <!--是否要启动控制台-->
+        <ns1:ConsoleStart>true</ns1:ConsoleStart>
+        <!--控制台RMI地址-->
+        <ns1:ConsoleUrl>rmi://localhost:7777/ftpConsole</ns1:ConsoleUrl>
+    </ns1:FtpConsole>
+    <!--监控信息是否入库-->
+    <ns1:IsRecordMonitor>true</ns1:IsRecordMonitor>
+</ns1:FtpSystem>

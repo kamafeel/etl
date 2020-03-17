@@ -1,0 +1,21 @@
+<wicket:panel>
+	<fieldset>
+        <legend><wicket:message key="choiceDestFtpStep.choice"></wicket:message></legend>
+		<table>
+		  <tr>
+		   <td><wicket:message key="ChoiceDestFtpStep_Item"></wicket:message></td>
+		   <td><input type="checkbox" wicket:id="addNewDestFtp" /></td>
+		  </tr>
+		</table>
+	</fieldset>
+	<fieldset>
+        <legend><wicket:message key="choiceDestFtpStep.qryStatus"></wicket:message></legend>
+		<span wicket:id="ChoiceDestFtpStep.ResultBorder">
+			<span wicket:id ="ChoiceDestFtpStep.QueryResult">²éÑ¯½á¹û</span>
+		</span>
+	</fieldset>
+	<fieldset>
+        <legend><wicket:message key="choiceDestFtpStep.ftplist"></wicket:message></legend>
+		<select wicket:id ="choiceDestFtpInfoBean"></select>
+	</fieldset>
+</wicket:panel>

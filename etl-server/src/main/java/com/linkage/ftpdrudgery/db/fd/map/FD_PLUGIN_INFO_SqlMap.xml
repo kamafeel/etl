@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="FD_PLUGIN_INFO">
+		
+	<insert id = "addFdPluginInfo" parameterType = "FdPluginInfo"  >
+	  INSERT INTO FD_PLUGIN_INFO (PLUGIN_ID, TASK_ID, DATE_OFFSET, DB2_STATEMENT, PER_SHELL, DB2_ENVIRONMENT, PLUGIN_INFO) 
+      VALUES (#{pluginId,jdbcType=VARCHAR}, #{taskId,jdbcType=VARCHAR}, #{dateOffset,jdbcType=INTEGER}, #{dB2Statement,jdbcType=VARCHAR}, #{perShell,jdbcType=VARCHAR}, #{db2Environment,jdbcType=VARCHAR}, #{pluginInfo,jdbcType=VARCHAR}) with ur     
+	</insert>
+	
+	<select id="getFdPluginInfo" parameterType="FdPluginInfo" resultType="FdPluginInfo">
+	  select PLUGIN_ID AS pluginId, TASK_ID AS taskId, DATE_OFFSET AS dateOffset, DB2_STATEMENT AS dB2Statement, PER_SHELL AS perShell, DB2_ENVIRONMENT AS db2Environment, PLUGIN_INFO AS pluginInfo
+      from FD_PLUGIN_INFO
+      <if test="pluginId != null">
+      	where PLUGIN_ID = #{pluginId,jdbcType=VARCHAR}
+      </if>
+      with ur
+	</select>
+	
+	<update id="updateFdPluginInfo" parameterType="FdPluginInfo">
+	  update FD_PLUGIN_INFO set
+	  DATE_OFFSET = #{dateOffset,jdbcType=INTEGER}
+	  <if test="taskId != null">
+      	,TASK_ID = #{taskId,jdbcType=VARCHAR}
+      </if>
+	  <if test="db2Environment != null">
+      	,DB2_ENVIRONMENT = #{db2Environment,jdbcType=VARCHAR}
+      </if>
+      <if test="dB2Statement != null">
+      	,DB2_STATEMENT = #{dB2Statement,jdbcType=VARCHAR}
+      </if>
+      <if test="perShell != null">
+      	,PER_SHELL = #{perShell,jdbcType=VARCHAR}
+      </if>
+      <if test="pluginInfo != null">
+      	,PLUGIN_INFO = #{pluginInfo,jdbcType=VARCHAR}
+      </if>
+		where PLUGIN_ID = #{pluginId,jdbcType=VARCHAR}
+	</update>
+	
+	<delete id="delFdPluginInfo" parameterType="FdPluginInfo">
+	  	delete from FD_PLUGIN_INFO 
+		<if test="pluginId != null">
+      	where PLUGIN_ID = #{pluginId,jdbcType=VARCHAR}
+      	</if>
+      	<if test="taskId != null">
+      	or TASK_ID = #{taskId,jdbcType=VARCHAR}
+      	</if> 
+	</delete>
+	
+</mapper>

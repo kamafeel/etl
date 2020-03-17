@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>更新任务</title>
+</head>
+<body>
+	<fieldset>
+        <legend>更新结果</legend>
+		<span wicket:id ="orderResult"></span>
+		<div>
+			<span wicket:id="feedback"/>
+    	</div>
+	</fieldset>
+		<form wicket:id="form">
+			<fieldset>
+        		<legend>任务信息</legend>
+				<table>
+					  <tr>
+					   <td><wicket:message key="Task_id"></wicket:message></td>
+					   <td><input readonly type="text" wicket:id="id" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_name"></wicket:message></td>
+					   <td><input type="text" wicket:id="taskName" size="60"/></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_sourceDir"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceDir" size="60" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_destDir"></wicket:message></td>
+					   <td><input type="text" wicket:id="destDir" size="60" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_regExp"></wicket:message></td>
+					   <td><input type="text" wicket:id="regExp" size="60" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_isDelete"></wicket:message></td>
+					   <td>
+							<select wicket:id="isDelete">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_cronTrigger"></wicket:message></td>
+					   <td><input type="text" wicket:id="cronTrigger" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_isBackUp"></wicket:message></td>
+					   <td>
+							<select wicket:id="isBackUp">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_backUpDir"></wicket:message></td>
+					   <td><input type="text" wicket:id="backUpDir" size="60" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_checkSleepTime"></wicket:message></td>
+					   <td><input type="text" wicket:id="checkSleepTime" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_beforeDay"></wicket:message></td>
+					   <td><input type="text" wicket:id="beforeDay" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="Task_recordValidDay"></wicket:message></td>
+					   <td><input type="text" wicket:id="recordValidDay" /></td>
+					  </tr>					  				  
+				 </table>			 
+			</fieldset>
+			<fieldset>
+		        <legend>插件信息</legend>
+		        <table>
+				  <tr>
+				   <td><wicket:message key="Task_pluginName"></wicket:message></td>
+				   <td><input type="text" wicket:id="pluginName" size="60" /></td>
+				  </tr>
+				  <tr>
+				   <td><wicket:message key="Task_pluginPath"></wicket:message></td>
+				   <td><input type="text" wicket:id="pluginPath" size="60" /></td>
+				  </tr>
+				  <tr>
+				   <td><wicket:message key="Task_pluginClassPath"></wicket:message></td>
+				   <td><input type="text" wicket:id="pluginClassPath" size="60" /></td>
+				  </tr>
+				  <tr>
+				   <td><wicket:message key="Task_pluginId"></wicket:message></td>
+				   <td><input readonly type="text" wicket:id="pluginId" size="60" /></td>
+				  </tr>
+				</table>
+		     </fieldset>
+			<fieldset>
+        		<legend>来源方Ftp信息</legend>
+				 <table>
+				 	  <tr>
+					   <td><wicket:message key="FtpInfo_id"></wicket:message></td>
+					   <td><input readonly type="text" wicket:id="sourceFtp.id" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_remoteIP"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.remoteIP" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_port"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.port" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_userName"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.userName" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_passWord"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.passWord" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_transfersType"></wicket:message></td>
+					   <td>
+							<select wicket:id="sourceFtp.transfersType">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_workType"></wicket:message></td>
+					   <td>
+					  		<select wicket:id="sourceFtp.workType">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_timeout"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.timeout" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_encoding"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.encoding" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_retryCount"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.retryCount" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_retryInterval"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.retryInterval" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_maxConnect"></wicket:message></td>
+					   <td><input type="text" wicket:id="sourceFtp.maxConnect" /></td>
+					  </tr>
+					  <tr>
+						 <td><wicket:message key="FtpInfo_isNoOp"></wicket:message></td>
+						  <td>
+						   	<select wicket:id="sourceFtp.isNoOp">
+								<option></option>
+								<option></option>
+							</select>
+						  </td>
+					  </tr>
+					  <tr>
+						 <td><wicket:message key="FtpInfo_isRBD"></wicket:message></td>
+						  <td>
+						   	<select wicket:id="sourceFtp.isRBD">
+								<option></option>
+								<option></option>
+							</select>
+						  </td>
+					  </tr>
+				</table>
+			</fieldset>
+			<fieldset>
+        		<legend>目的方Ftp信息</legend>
+				<table>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_id"></wicket:message></td>
+					   <td><input readonly type="text" wicket:id="destFtp.id" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_remoteIP"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.remoteIP" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_port"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.port" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_userName"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.userName" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_passWord"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.passWord" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_transfersType"></wicket:message></td>
+					   <td>
+							<select wicket:id="destFtp.transfersType">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_workType"></wicket:message></td>
+					   <td>
+							<select wicket:id="destFtp.workType">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_timeout"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.timeout" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_encoding"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.encoding" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_retryCount"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.retryCount" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_retryInterval"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.retryInterval" /></td>
+					  </tr>
+					  <tr>
+					   <td><wicket:message key="FtpInfo_maxConnect"></wicket:message></td>
+					   <td><input type="text" wicket:id="destFtp.maxConnect" /></td>
+					  </tr>
+					  <tr>
+						 <td><wicket:message key="FtpInfo_isNoOp"></wicket:message></td>
+						  <td>
+						   	<select wicket:id="destFtp.isNoOp">
+								<option></option>
+								<option></option>
+							</select>
+						  </td>
+					  </tr>
+					  <tr>
+						 <td><wicket:message key="FtpInfo_isRBD"></wicket:message></td>
+						  <td>
+						   	<select wicket:id="destFtp.isRBD">
+								<option></option>
+								<option></option>
+							</select>
+						  </td>
+					  </tr>
+				</table>
+			</fieldset>
+			<fieldset>
+        		<legend>操作</legend>
+        		<table>
+	        		<tr>
+						<td><wicket:message key="Task_save"></wicket:message></td>
+						<td><input type="checkbox" wicket:id="isSave" /></td>
+					</tr>
+				</table>
+				<input type="submit" wicket:id="updateButton" value="更新任务" />
+				<input type="submit" wicket:id="returnButton" value="返回" />
+			</fieldset>
+		</form>
+    </body>
+</html>

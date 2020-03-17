@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<link rel="stylesheet" type="text/css" href="./css/style_table.css"/>
+<title>更新系统信息</title>
+</head>
+
+<body>
+	<fieldset>
+        <legend>更新结果</legend>
+		<span wicket:id ="orderResult"></span>
+		<div>
+			<span wicket:id="feedback"/>
+    	</div>
+	</fieldset>
+		<form wicket:id="form">
+			<fieldset>
+        		<legend>系统信息</legend>
+				<table>
+					  <tr>
+					   <td>控制台RMI地址</td>
+					   <td><input type="text" wicket:id="url" size="60"/></td>
+					  </tr>
+					  <tr>
+					   <td>是否要启动控制台</td>
+					   <td>
+							<select wicket:id="consoleStart">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td>监控记录启动标志</td>
+					   <td>
+							<select wicket:id="isRecordMonitor">
+								<option></option>
+								<option></option>
+							</select>
+						</td>
+					  </tr>
+					  <tr>
+					   <td>下载文件存放临时文件夹</td>
+					   <td><input type="text" wicket:id="downLoadTempDir" size="60" /></td>
+					  </tr>
+					  <tr>
+					   <td>存档文件夹</td>
+					   <td><input type="text" wicket:id="backUpDir" size="60" /></td>
+					  </tr>
+					  <tr>
+					   <td>上传临时后缀</td>
+					   <td><input type="text" wicket:id="uploadPostfix" /></td>
+					  </tr>			  					  				  
+				 </table>			 
+			</fieldset>
+			<fieldset>
+        		<legend>操作</legend>
+				<input type="submit" wicket:id="updateButton" value="更新" />
+			</fieldset>
+		</form>
+    </body>
+</html>
